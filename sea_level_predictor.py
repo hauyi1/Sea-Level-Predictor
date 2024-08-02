@@ -9,18 +9,21 @@ def draw_plot():
 
 
     # Create scatter plot
-    regression = stats.linregress(df['Year'], df['CSIRO Adjusted Sea Level'])
     plt.scatter(df['Year'], df['CSIRO Adjusted Sea Level'], label='data')
 
-
-
     # Create first line of best fit
+    regression = linregress(df['Year'], df['CSIRO Adjusted Sea Level'])
     plt.plot(df['Year'], regression.intercept + regression.slope*df['Year'], label='Line of best fit')
 
     # Create second line of best fit
-
+    df_recent = df[df['Year']>=2000]
+    regress2 = linregress(df_recent['Year'], df_recent['CSIRO Adjusted Sea Level'])
+    plt.plot(df_recent['Year'], regress2.intercept + regress2.slope*df_recent['Year'], label='Line of best fit')
 
     # Add labels and title
+    plt.xlabel('Year')
+    plt.ylabel('Sea Level (inches)')
+    plt.title('Rise in Sea Level')
 
     
     # Save plot and return data for testing (DO NOT MODIFY)
