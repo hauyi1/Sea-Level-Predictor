@@ -1,0 +1,11 @@
+{
+	"folders": [
+		{
+			"uri": "vscode-remote://freecodecam-boilerplate-lbqsvlcwx8m.ws-eu115.gitpod.io/workspace/boilerplate-sea-level-predictor"
+		}
+	],
+	"remoteAuthority": "freecodecam-boilerplate-lbqsvlcwx8m.ws-eu115.gitpod.io",
+	"settings": {
+		"workbench.colorTheme": "freeCodeCamp Dark Theme"
+	}
+}
